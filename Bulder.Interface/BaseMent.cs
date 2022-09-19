@@ -13,6 +13,8 @@ namespace Bulder.Interface
         //public TypeOfMateryal TypeOfMateryal { get; set; }
         public int Count { get; set; }
         public double MateryalPrrice { get; set; }
+        public int Sort { get; set; }
+        public bool isComplited { get; set; }
         TypeOfMateriyal IPart.TypeOfMateryal { get; set; }
 
         public double GetConstructionCost()

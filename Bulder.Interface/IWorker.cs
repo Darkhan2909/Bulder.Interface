@@ -8,7 +8,7 @@ namespace Bulder.Interface
 {
 
     public enum WorkerProfession { Plumber, Worker,StoneWorker}
-    internal interface IWorker
+    public interface IWorker
     {
         string WorkerName { get; set; }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Bulder.Interface;
 namespace Bulder.Interface
 {
-    public enum TypeOfMateriyal { brick, wood, glass }
+    public enum TypeOfMateriyal { brick=5, wood, glass }
     public interface IPart
     {
         string Color { get; set; }
@@ -14,7 +14,9 @@ namespace Bulder.Interface
         TypeOfMateriyal TypeOfMateryal { get; set; }
         int Count { get; set; }
         double MateryalPrrice { get; set; }
+        int Sort { get; set; }
 
+        bool isComplited { get; set; }
         TimeSpan GetConstructionTime();
         double GetConstructionCost();
     }

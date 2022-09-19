@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bulder.Interface
 {
-    public class Door : IPart
+    internal class Roof : IPart
     {
         public string Color { get; set; }
         public TimeSpan ConstructionTime { get; set; }
@@ -18,12 +18,12 @@ namespace Bulder.Interface
 
         public double GetConstructionCost()
         {
-            return MateryalPrrice * Count;
+            return ConstructionTime.TotalSeconds;
         }
 
         public TimeSpan GetConstructionTime()
         {
-            return TimeSpan.FromTicks(ConstructionTime.Ticks * Count);
+            return ConstructionTime;
         }
     }
 }

@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace Bulder.Interface
 {
-    public class Worker : IWorker
+    internal class TeamLeader : IWorker
     {
-        internal bool isBusy;
-        private double pricePerHour;
-
         public string WorkerName { get; set; }
         public int WorkerCount { get; set; }
         public string WorkerId { get; set; }
@@ -19,12 +16,9 @@ namespace Bulder.Interface
 
         public void PrintSeloryInfo()
         {
-            double selory = 0;
-            foreach (IPart part in WorkLists)
-            {
-                selory += part.ConstructionTime.TotalHours * pricePerHour;
-            }
-            Console.WriteLine("Zarplata: {0} {1:#,0.00}",WorkerName, selory);
         }
+
+
+
     }
 }
